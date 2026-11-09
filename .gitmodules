@@ -1,0 +1,3 @@
+[submodule "ContentSharedAssets"]
+	path = ContentSharedAssets
+	url = https://github.com/kweers/ue-shared-assets-demo.git

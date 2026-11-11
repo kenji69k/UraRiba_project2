@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# Папки, которые нельзя коммитить
+FORBIDDEN_DIRS="Saved/ Intermediate/ Binaries/ DerivedDataCache/ .vs/"
+MAX_SIZE_MB=50
+err=0
+
+# Получаем список добавленных/измененных файлов в индексе
+changed_files=$(git diff --cached --name-only --diff-filter=ACMR)
+
+for file in $changed_files; do
+    # Проверка запрещенных папок
+    for dir in $FORBIDDEN_DIRS; do
+        case "$file" in
+            $dir*|*/$dir*)
+                echo "ERROR: '$file' находится в запрещенной папке '$dir'."
+                err=1
+                ;;
+        esac
+    done
+
+    # Проверка размера и LFS
+    if [ -f "$file" ]; then
+        # Размер в байтах (портируемо через wc -c, чтобы работало и на macOS)
+        size=$(wc -c < "$file" | tr -d ' ')
+        size_mb=$((size / 1048576))
+
+        # Проверяем, находится ли файл под LFS
+        lfs_status=$(git check-attr filter -- "$file" | grep ': filter: lfs' | wc -l | tr -d ' ')
+
+        if [ "$size_mb" -ge "$MAX_SIZE_MB" ] && [ "$lfs_status" -eq "0" ]; then
+            echo "ERROR: '$file' имеет размер ${size_mb}MB (>= ${MAX_SIZE_MB}MB) и НЕ tracked через Git LFS."
+            echo "         Добавьте правило в .gitattributes или используйте git lfs track."
+            err=1
+        fi
+    fi
+done
+
+exit $err

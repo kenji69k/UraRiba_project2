@@ -5,7 +5,6 @@
 
 
 
-
 2\. Объекты на основной сцене:
 
 Blueprint: Block\_BP, Blue\_Coin\_Challenge\_BP, Blue\_Coin\_Challenge\_Pad\_BP, Bounce\_Pad\_BP, Circle\_Coin\_Spline\_BP, Coin\_Spawn\_1\_BP, Coin\_Spawn\_2\_BP, Escaping\_Coin\_Challenge\_BP, Gem\_BP, Green\_Coin\_Challenge\_BP, Green\_Coin\_Challenge\_Pad\_BP, Guide\_Widget\_BP, Instance\_Coin\_Spline\_BP, Interactive\_Coin\_Spline\_BP, Interp\_Movement\_Coin\_Component\_BP, Interp\_Movement\_Coin\_Spline\_BP, Loop\_Coin\_Component\_BP, Loop\_Coin\_Spline\_BP, Moving\_Coin\_Spline\_BP, Moving\_Pads\_BP, Moving\_Platform\_BP, Player\_Bot\_BP, Press\_Pad\_Challenge\_BP, Press\_Pad\_Challenge\_Reward\_BP, Ring\_Challenge\_BP, Rotating\_Cog\_BP, Rotating\_Coin\_Spline\_BP, Rotating\_Platform\_BP, Switch\_Platform\_BP, Translucent\_Coin\_BP, Translucent\_Coin\_Spawn\_BP, Translucent\_Instance\_Coin\_Spline\_BP.
@@ -44,7 +43,8 @@ Game\_Instance\_Interface\_BP — Blueprint Interface. Определяет фу
 
 * Челленджи (испытания)
 
-Blue\_Coin\_Challenge\_BP — Логика испытания со сбором синих монет. Отслеживает прогресс и выдает награду при выполнении условия.
+
+Blue\_Coin\_Challenge\_BP — Логика испытания со сбором синих монет. Отслеживает прогресс и выдаёт награду при выполнении условия.
 
 Green\_Coin\_Challenge\_BP — Аналогично, но для зеленых монет.
 

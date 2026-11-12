@@ -2,15 +2,15 @@
 
 
 
-\- changed the lighting color from white to yellow.
+\- изменен цвет освещения с белого на жёлтый.
 
-\- added an extra step to increase the level’s elevation and shifted objects (coins, obstacles) accordingly.
+\- добавлена дополнительная ступень, чтобы увеличить высоту уровня. соответствующим образом перемещены объекты (монеты, препятствия).
 
-\- changed the block colors to brown and beige; the previous, more vibrant colors (red, blue, yellow) were too distracting, so they were replaced with more neutral tones that fit better within the color palette.
+\- изменены цвета блоков на коричневый и бежевый; прежние, более яркие цвета (красный, синий, жёлтый) слишком отвлекали внимание, поэтому их заменили на более нейтральные тона, лучше вписывающиеся в общую цветовую палитру.
 
-\- removed unnecessary blocks that could mislead the player.
+\- убраны лишние блоки, которые могли ввести игрока в заблуждение.
 
-\- added wall-like blocks in the middle of the level, replacing the redundant ones.
+\- добавлены в центре уровня блоки, напоминающие стены, заменив ими ненужные элементы.
 
-\- added yellow blocks at the end of the level to signify its completion.
+\- в конце уровня добавлены жёлтые блоки, обозначающие конец уровня.
 
